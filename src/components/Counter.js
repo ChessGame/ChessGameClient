@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { render } from 'react-dom';
+
 export default class Counter extends Component {
     static propTypes = {
         increment: PropTypes.func.isRequired,
