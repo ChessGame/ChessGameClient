@@ -6,7 +6,7 @@
 .idea
 *.iml
 out
+npm*.log*
 gen
-*log*
 build
 node_modules
