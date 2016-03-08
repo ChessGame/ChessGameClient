@@ -1,33 +1,33 @@
 import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../constants/ActionTypes';
 
 export function increment() {
-  return {
-    type: INCREMENT_COUNTER
-  };
+    return {
+        type: INCREMENT_COUNTER,
+        index: 1
+    };
 }
 
 export function decrement() {
-  return {
-    type: DECREMENT_COUNTER
-  };
+    return {
+        type: DECREMENT_COUNTER,
+        index: 2
+    };
 }
 
 export function incrementIfOdd() {
-  return (dispatch, getState) => {
-    const { counter } = getState();
-
-    if (counter % 2 === 0) {
-      return;
-    }
-
-    dispatch(increment());
-  };
+    return (dispatch, getState) => {
+        const { counter } = getState();
+        if (counter % 2 === 0) {
+            return;
+        }
+        dispatch(increment());
+    };
 }
 
 export function incrementAsync() {
-  return dispatch => {
-    setTimeout(() => {
-      dispatch(increment());
-    }, 1000);
-  };
+    return dispatch => {
+        setTimeout(() => {
+            dispatch(increment());
+        }, 1000);
+    };
 }
