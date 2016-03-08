@@ -1,15 +1,15 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../constants/ActionTypes';
+import * as types from '../constants/ActionTypes';
 
 export function increment() {
     return {
-        type: INCREMENT_COUNTER,
+        type: types.INCREMENT_COUNTER,
         index: 1
     };
 }
 
 export function decrement() {
     return {
-        type: DECREMENT_COUNTER,
+        type: types.DECREMENT_COUNTER,
         index: 2
     };
 }
