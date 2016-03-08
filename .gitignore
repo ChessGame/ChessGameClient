@@ -7,10 +7,6 @@
 *.iml
 out
 gen
-node_modules
+*log*
 build
-app/ts/*.js
-app/ts/*.map
-app/ts/components/*.js
-app/ts/components/*.map
-*.log*
+node_modules
