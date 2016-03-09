@@ -28,21 +28,31 @@
  **/
 import React, { PropTypes, Component } from 'react';
 import Link from './LinkComponent';
+import $ from 'jquery';
 
 export default class CopyRight extends Component {
     static propTypes = {
-        copyright: PropTypes.array.isRequired,
         year: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         recordNumber: PropTypes.string.isRequired
     };
 
+    getJSON() {
+        $.get(this.props.source, function (result) {
+            this.setState({
+                year: result.year,
+                name: result.name,
+                recordNumber: result.recordNumber
+            });
+        }.bind(this));
+    }
+
     render() {
-        const { copyright } = this.props;
+        const { year,name,recordNumber } = this.state;
         return (
             <div className="copyright">
-                CopyRight © { copyright.year } { copyright.name },Inc. All Rights Reserved.
-                备案号：{ copyright.recordNumber }
+                CopyRight © { year } { name },Inc. All Rights Reserved.
+                备案号：{ recordNumber }
             </div>
         );
     }

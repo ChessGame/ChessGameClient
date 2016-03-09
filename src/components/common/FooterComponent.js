@@ -17,17 +17,12 @@ import LinkList from './LinkListComponent';
 import CopyRight from './CopyRightComponent';
 
 export default class Footer extends Component {
-    static propTypes = {
-        links: PropTypes.array.isRequired,
-        copyright: PropTypes.array.isRequired
-    };
 
     render() {
-        const {links,copyright} = this.props;
         return (
-            <footer className='footer'>
-                <LinkList links={links}/>
-                <CopyRight copyright={copyright}/>
+            <footer>
+                <LinkList source="../../data/KV/links.json"/>
+                <CopyRight source="../../data/KV/copyright.json"/>
             </footer>
         );
     }

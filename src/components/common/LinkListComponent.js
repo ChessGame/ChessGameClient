@@ -28,19 +28,38 @@
  **/
 import React, { PropTypes, Component } from 'react';
 import Link from './LinkComponent';
+import $ from 'jquery';
 
 export default class LinkList extends Component {
     static propTypes = {
-        links: PropTypes.array.isRequired
+        links: PropTypes.array.isRequired,
+        name: PropTypes.string.isRequired,
+        href: PropTypes.string.isRequired
     };
 
+
+    getJSON() {
+        $.get(this.props.source, function (result) {
+            this.setState({
+                links: result.links
+            });
+        }.bind(this));
+    }
+
     render() {
-        const { links } = this.props;
+        const { links } = this.state;
+        var lk = links.map(function (link) {
+            return (
+                <li>
+                    <a href={ link.href }>
+                        { link.name }
+                    </a>
+                </li>
+            );
+        });
         return (
             <ul>
-                links.forEach(function(link){
-                <Link link={link}/>
-            })
+                {lk}
             </ul>
         );
     }

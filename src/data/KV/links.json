@@ -1,27 +1,22 @@
 {
   "links": [
     {
-      "index": 1,
       "name": "小莫的博客1",
       "link": "http://www.xiaomo.info"
     },
     {
-      "index": 2,
       "name": "小莫的博客2",
       "link": "http://www.xiaomo.info"
     },
     {
-      "index": 3,
       "name": "小莫的博客3",
       "link": "http://www.xiaomo.info"
     },
     {
-      "index": 4,
       "name": "小莫的博客4",
       "link": "http://www.xiaomo.info"
     },
     {
-      "index": 5,
       "name": "小莫的博客5",
       "link": "http://www.xiaomo.info"
     }

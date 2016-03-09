@@ -30,15 +30,15 @@ import React, { PropTypes, Component } from 'react';
 
 export default class Link extends Component {
     static propTypes = {
-        link: PropTypes.string.isRequired,
+        href: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired
     };
 
     render() {
-        const {link, name} = this.props;
+        const {href, name} = this.props;
         return (
             <li>
-                <a href={link}>{name}</a>
+                <a href={href}>{name}</a>
             </li>
         );
     }
