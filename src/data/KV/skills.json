@@ -1,0 +1,36 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "description": "后端开发语言",
+      "name": "java",
+      "href": "http://www.baidu.com",
+      "createTime": "2016-03-03 13:23:20",
+      "updateTime": "2016-03-03 13:23:20"
+    },
+    {
+      "id": 2,
+      "description": "前端js的VIEW层",
+      "name": "reactjs",
+      "href": "http://www.baidu.com",
+      "createTime": "2016-03-03 13:23:20",
+      "updateTime": "2016-03-03 13:23:20"
+    },
+    {
+      "id": 3,
+      "description": "一个重量级的js库",
+      "name": "angularjs",
+      "href": "http://www.baidu.com",
+      "createTime": "2016-03-03 13:23:20",
+      "updateTime": "2016-03-03 13:23:20"
+    },
+    {
+      "id": 4,
+      "description": "用于最广泛的数据库",
+      "name": "mysql",
+      "href": "http://www.baidu.com",
+      "createTime": "2016-03-03 13:23:20",
+      "updateTime": "2016-03-03 13:23:20"
+    }
+  ]
+}

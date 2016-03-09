@@ -2,8 +2,10 @@
   "copyright": [
     {
       "year": 2016,
-      "name": "小莫",
-      "recordNumber": " 浙ICP备15009606号"
+      "siteName": "小莫",
+      "recordNumber": " 浙ICP备15009606号",
+      "siteUrl": "http://www.xiaomo.info",
+      "gitUrl": "https://github.com/qq83387856"
     }
   ]
 }
