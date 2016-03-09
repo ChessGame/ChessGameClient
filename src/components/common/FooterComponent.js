@@ -22,7 +22,7 @@ export default class Footer extends Component {
         return (
             <footer>
                 <LinkList source="../../data/KV/links.json"/>
-                <CopyRight source="../../data/Array/copyright.json"/>
+                <CopyRight source="../../data/Array/options.json"/>
             </footer>
         );
     }

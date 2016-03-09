@@ -19,7 +19,7 @@ import $ from 'jquery';
 export default class CopyRight extends Component {
     static propTypes = {
         year: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
+        siteName: PropTypes.string.isRequired,
         recordNumber: PropTypes.string.isRequired
     };
 
@@ -27,17 +27,17 @@ export default class CopyRight extends Component {
         $.get(this.props.source, function (result) {
             this.setState({
                 year: result.year,
-                name: result.name,
+                siteName: result.siteName,
                 recordNumber: result.recordNumber
             });
         }.bind(this));
     }
 
     render() {
-        const { year,name,recordNumber } = this.state;
+        const { year,siteName,recordNumber } = this.state;
         return (
-            <div className="copyright">
-                CopyRight © { year } { name },Inc. All Rights Reserved.
+            <div>
+                CopyRight © { year } { siteName },Inc. All Rights Reserved.
                 备案号：{ recordNumber }
             </div>
         );
