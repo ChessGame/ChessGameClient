@@ -20,16 +20,26 @@ module.exports = {
                 }
             },
 
-            {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'},
+            {
+                test: /\.css$/,
+                loaders: ['style', 'css']
+            },
 
-            {test: /\.css$/, loader: 'style-loader!css-loader'},
-
-            {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+            {
+                test: /\.(gif|jpg|png|woff|woff2|svg|eot|ttf)$/,
+                loaders: ['url-loader?limit=8192']
+            }
         ]
     },
     plugins: [
         commonsPlugin,
         hotModuleReplacementPlugin,
         noErrorsPlugin
-    ]
+    ],
+    devServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true
+    }
 };

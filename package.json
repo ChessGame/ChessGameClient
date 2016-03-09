@@ -15,15 +15,24 @@
     "babel-preset-react": "^6.5.0",
     "bootstrap": "^3.3.6",
     "component-webpack-plugin": "^0.2.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
     "jquery": "^2.2.1",
+    "less": "^2.6.1",
+    "less-loader": "^2.2.2",
+    "node-sass": "^3.4.2",
     "react-bootstrap": "^0.28.3",
     "react-hot": "^0.1.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
     "webpack": "^1.12.14",
+    "webpack-dev-middleware": "^1.5.1",
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --hot --inline"
   },
   "repository": {
     "type": "git",
