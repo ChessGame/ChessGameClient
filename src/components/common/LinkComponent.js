@@ -28,7 +28,7 @@
  **/
 import React, { PropTypes, Component } from 'react';
 
-export default class Footer extends Component {
+export default class Link extends Component {
     static propTypes = {
         link: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired
@@ -38,7 +38,7 @@ export default class Footer extends Component {
         const {link, name} = this.props;
         return (
             <li>
-                <a href="{this.props.link}">{this.props.name}</a>
+                <a href={link}>{name}</a>
             </li>
         );
     }

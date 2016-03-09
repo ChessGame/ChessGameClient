@@ -29,19 +29,21 @@
 import React, { PropTypes, Component } from 'react';
 import Link from './LinkComponent';
 
-export default class LinkList extends Component {
+export default class CopyRight extends Component {
     static propTypes = {
-        links: PropTypes.array.isRequired
+        copyright: PropTypes.array.isRequired,
+        year: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        recordNumber: PropTypes.string.isRequired
     };
 
     render() {
-        const { links } = this.props;
+        const { copyright } = this.props;
         return (
-            <ul>
-                links.forEach(function(link){
-                <Link link={link}/>
-            })
-            </ul>
+            <div className="copyright">
+                CopyRight © { copyright.year } { copyright.name },Inc. All Rights Reserved.
+                备案号：{ copyright.recordNumber }
+            </div>
         );
     }
 

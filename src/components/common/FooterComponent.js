@@ -13,21 +13,21 @@
  * @Copyright(©) 2015 by xiaomo.
  **/
 import React, { PropTypes, Component } from 'react';
+import LinkList from './LinkListComponent';
+import CopyRight from './CopyRightComponent';
 
 export default class Footer extends Component {
     static propTypes = {
-        markedCount: PropTypes.number.isRequired,
-        filter: PropTypes.string.isRequired,
-        onClearMarked: PropTypes.func.isRequired
+        links: PropTypes.array.isRequired,
+        copyright: PropTypes.array.isRequired
     };
 
     render() {
+        const {links,copyright} = this.props;
         return (
             <footer className='footer'>
-                <ul className='filters'>
-                    <li>
-                    </li>
-                </ul>
+                <LinkList links={links}/>
+                <CopyRight copyright={copyright}/>
             </footer>
         );
     }
