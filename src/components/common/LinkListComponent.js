@@ -17,14 +17,10 @@ import Link from './LinkComponent';
 import $ from 'jquery';
 
 export default class LinkList extends Component {
-    static propTypes = {
-        links: PropTypes.array.isRequired,
-        name: PropTypes.string.isRequired,
-        href: PropTypes.string.isRequired
-    };
-
     state = {
-        links: ''
+        links: [],
+        name: '',
+        href: ''
     };
 
     componentDidMount() {
@@ -41,15 +37,17 @@ export default class LinkList extends Component {
 
     render() {
         const { links } = this.state;
-        var lk = links.map(function (link) {
-            return (
-                <li>
-                    <a href={ link.href }>
-                        { link.name }
-                    </a>
-                </li>
-            );
-        });
+        if (links.length > 0) {
+            var lk = links.map(function (link, index) {
+                return (
+                    <li key={index}>
+                        <a href={ link.href }>
+                            { link.name }
+                        </a>
+                    </li>
+                );
+            });
+        }
         return (
             <ul>
                 {lk}

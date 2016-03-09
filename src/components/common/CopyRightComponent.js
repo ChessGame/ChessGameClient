@@ -17,14 +17,8 @@ import Link from './LinkComponent';
 import $ from 'jquery';
 
 export default class CopyRight extends Component {
-    static propTypes = {
-        year: PropTypes.number.isRequired,
-        siteName: PropTypes.string.isRequired,
-        recordNumber: PropTypes.string.isRequired
-    };
-
     state = {
-        year: '',
+        year: 0,
         siteName: '',
         recordNumber: ''
     };
