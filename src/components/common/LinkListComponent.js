@@ -12,7 +12,7 @@
  * @Description: footer
  * @Copyright(©) 2015 by xiaomo.
  **/
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import Link from './LinkComponent';
 import $ from 'jquery';
 

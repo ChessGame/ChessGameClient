@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Footer from '../components/common/FooterComponent'
+import NavBar from '../components/common/NavbarComponent'
 export default class Counter extends Component {
     static propTypes = {
         increment: PropTypes.func.isRequired,
@@ -12,6 +13,7 @@ export default class Counter extends Component {
         const { increment, incrementIfOdd, decrement, counter } = this.props;
         return (
             <div>
+                <NavBar/>
                 <p>
                     Clicked: {counter} times
                     {' '}

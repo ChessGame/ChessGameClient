@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Counter from '../components/Counter';
+import Counter from '../components/XiaoMo';
 import * as CounterActions from '../actions/CounterActions';
 
-class CounterApp extends Component {
+class MyApp extends Component {
     render() {
         const { counter, dispatch } = this.props;
         return (
@@ -20,4 +20,4 @@ function select(state) {
     };
 }
 
-export default connect(select)(CounterApp);
+export default connect(select)(MyApp);
