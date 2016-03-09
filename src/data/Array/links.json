@@ -1,22 +1,22 @@
 [
   {
-    "link": "http://www.baidu.com",
+    "href": "http://www.baidu.com",
     "name": "百度"
   },
   {
-    "link": "http://www.weibo.com",
+    "href": "http://www.weibo.com",
     "name": "微博"
   },
   {
-    "link": "http://www.zhihu.com",
+    "href": "http://www.zhihu.com",
     "name": "知乎"
   },
   {
-    "link": "http://www.dreamlu.net",
+    "href": "http://www.dreamlu.net",
     "name": "如梦"
   },
   {
-    "link": "http://www.xiaomo.info",
+    "href": "http://www.xiaomo.info",
     "name": "小莫"
   }
 ]

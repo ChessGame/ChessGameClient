@@ -2,23 +2,23 @@
   "links": [
     {
       "name": "小莫的博客1",
-      "link": "http://www.xiaomo.info"
+      "href": "http://www.xiaomo.info"
     },
     {
       "name": "小莫的博客2",
-      "link": "http://www.xiaomo.info"
+      "href": "http://www.xiaomo.info"
     },
     {
       "name": "小莫的博客3",
-      "link": "http://www.xiaomo.info"
+      "href": "http://www.xiaomo.info"
     },
     {
       "name": "小莫的博客4",
-      "link": "http://www.xiaomo.info"
+      "href": "http://www.xiaomo.info"
     },
     {
       "name": "小莫的博客5",
-      "link": "http://www.xiaomo.info"
+      "href": "http://www.xiaomo.info"
     }
   ]
 }
