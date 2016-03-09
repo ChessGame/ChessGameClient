@@ -20,7 +20,7 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <footer>
+            <footer id="footer">
                 <LinkList source="/src/data/KV/links.json"/>
                 <CopyRight source="/src/data/Array/options.json"/>
             </footer>

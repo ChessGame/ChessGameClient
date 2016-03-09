@@ -49,9 +49,11 @@ export default class LinkList extends Component {
             });
         }
         return (
-            <ul>
-                {lk}
-            </ul>
+            <div>
+                <ul className="list-unstyled list-inline">
+                    友情链接：{lk}
+                </ul>
+            </div>
         );
     }
 

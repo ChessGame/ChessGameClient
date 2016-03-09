@@ -43,7 +43,7 @@ export default class CopyRight extends Component {
         return (
             <div>
                 CopyRight © { year } { siteName },Inc. All Rights Reserved.
-                备案号：{ recordNumber }
+                备案号：<a href="http://icp.alexa.cn/">{ recordNumber }</a>
             </div>
         );
     }
