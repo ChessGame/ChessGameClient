@@ -23,6 +23,13 @@ export default class LinkList extends Component {
         href: PropTypes.string.isRequired
     };
 
+    state = {
+        links: ''
+    };
+
+    componentDidMount() {
+        this.getJSON();
+    }
 
     getJSON() {
         $.get(this.props.source, function (result) {

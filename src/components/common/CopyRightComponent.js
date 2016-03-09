@@ -23,6 +23,16 @@ export default class CopyRight extends Component {
         recordNumber: PropTypes.string.isRequired
     };
 
+    state = {
+        year: '',
+        siteName: '',
+        recordNumber: ''
+    };
+
+    componentDidMount() {
+        this.getJSON();
+    }
+
     getJSON() {
         $.get(this.props.source, function (result) {
             this.setState({
@@ -33,6 +43,7 @@ export default class CopyRight extends Component {
         }.bind(this));
     }
 
+
     render() {
         const { year,siteName,recordNumber } = this.state;
         return (
@@ -42,6 +53,4 @@ export default class CopyRight extends Component {
             </div>
         );
     }
-
-
 }
