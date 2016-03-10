@@ -20,7 +20,7 @@ import $ from 'jquery';
 export default class Logo extends Component {
 
     state = {
-        siteOptions: [],
+        options: [],
         siteName: '',
         siteUrl: ''
     };
@@ -32,17 +32,17 @@ export default class Logo extends Component {
     getJSON() {
         $.get(this.props.source, function (result) {
             this.setState({
-                siteOptions: result.options
+                options: result
             });
         }.bind(this));
     }
 
     render() {
-        const { siteOptions } = this.state;
+        const { options } = this.state;
         return (
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href={siteOptions.siteUrl}>{siteOptions.siteName}</a>
+                    <a href={options.siteUrl}>{options.siteName}</a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>

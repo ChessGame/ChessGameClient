@@ -24,7 +24,7 @@ export default class NavBar extends Component {
     render() {
         return (
             <Navbar>
-                <Logo source="src/data/KV/options.json"/>
+                <Logo source="src/data/Array/options.json"/>
                 <Menu source="/src/data/KV/menu.json"/>
             </Navbar>
         )
