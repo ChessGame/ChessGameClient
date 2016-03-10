@@ -19,6 +19,7 @@ import $ from 'jquery';
 import Menu from './MenuComponent';
 import Logo from './LogoComponent';
 
+
 export default class NavBar extends Component {
 
     render() {

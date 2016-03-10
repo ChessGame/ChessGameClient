@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
+import { Badge } from 'antd';
 import Footer from '../components/common/FooterComponent'
 import NavBar from '../components/common/NavbarComponent'
-export default class Counter extends Component {
+export default class Xiaomo extends Component {
     static propTypes = {
         increment: PropTypes.func.isRequired,
         incrementIfOdd: PropTypes.func.isRequired,
@@ -15,13 +16,16 @@ export default class Counter extends Component {
             <div>
                 <NavBar/>
                 <p>
-                    Clicked: {counter} times
+                    您己经点击了 {' '}
+                    <Badge count={counter} style={{ backgroundColor: '#87d068' }}/>
+
+                    <hr/>
+                    <br/>
+                    <button onClick={increment} className="btn btn-info">加</button>
                     {' '}
-                    <button onClick={increment}>+</button>
+                    <button onClick={decrement} className="btn btn-danger">减</button>
                     {' '}
-                    <button onClick={decrement}>-</button>
-                    {' '}
-                    <button onClick={incrementIfOdd}>Increment if odd</button>
+                    <button onClick={incrementIfOdd} className="btn btn-success">奇数加一</button>
                 </p>
                 <div><Footer/></div>
             </div>

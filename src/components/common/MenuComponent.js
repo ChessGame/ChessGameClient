@@ -16,6 +16,7 @@
 import React, {Component} from 'react';
 import {Navbar,Nav,NavItem,NavDropdown,MenuItem} from 'react-bootstrap';
 import $ from 'jquery';
+import SideBar from './SideBarComponent';
 
 export default class Menu extends Component {
 
@@ -53,6 +54,7 @@ export default class Menu extends Component {
                 <Nav>
                     {ms}
                 </Nav>
+                <SideBar source="/src/data/KV/user.json"/>
             </Navbar.Collapse>
         )
     }
