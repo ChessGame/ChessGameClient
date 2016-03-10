@@ -1,5 +1,5 @@
 {
-  "menu": [
+  "menus": [
     {
       "id": 1,
       "name": "首页",
@@ -18,7 +18,7 @@
     },
     {
       "id": 1,
-      "name": "首页",
+      "name": "更新日志",
       "parentId": 0,
       "path": "http://www.baidu.com",
       "createTime": "2015-1-12 12:32:22",
