@@ -22,6 +22,7 @@ export default class Logo extends Component {
     state = {
         options: [],
         siteName: '',
+        logoUrl: '',
         siteUrl: ''
     };
 
@@ -42,7 +43,9 @@ export default class Logo extends Component {
         return (
             <Navbar.Header>
                 <Navbar.Brand>
-                    <a href={options.siteUrl}>{options.siteName}</a>
+                    <a href={options.siteUrl} className="change-logo-position"><img src={options.logoUrl}
+                                                                                    alt={options.siteName}
+                                                                                    className="logo"/></a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>

@@ -43,7 +43,7 @@ export default class Menu extends Component {
         if (menus.length > 0) {
             var ms = menus.map(function (menu, index) {
                 return (
-                    <MenuItem key={index} eventKey={index} href={ menu.path }>
+                    <MenuItem key={index} eventKey={index} href={ menu.path } className="menu-font">
                         { menu.name }
                     </MenuItem>
                 );
