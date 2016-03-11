@@ -4,7 +4,7 @@
   "description": "redux blog",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "webpack && node server.js "
   },
   "repository": {
     "type": "git",

@@ -18,9 +18,10 @@ import $ from 'jquery';
 import Menu from './MenuComponent';
 import SideBar from './SideBarComponent';
 import { Router, Route,IndexRoute, Link, browserHistory } from 'react-router'
-import Index from './../index/IndexComponent';
-import IndexBlog from './../index/IndexComponent';
-import IndexChangeLog from './../index/IndexComponent';
+import App from './../../containers/App';
+import NotMatch from './../common/NotMatchComponent';
+import IndexBlog from './../blog/IndexBlogComponent';
+import IndexChangeLog from './../changeLog/IndexChangeLogComponent';
 import IndexAbout from './../about/IndexAboutComponent';
 
 export default class NavBar extends Component {
