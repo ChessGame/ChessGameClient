@@ -2,40 +2,37 @@
   "links": [
     {
       "id": 1,
-      "href": "http://www.baidu.com",
-      "name": "百度",
-      "status": "",
+      "name": "首页",
+      "parentId": 3,
+      "path": "/index",
+      "component": "Index",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"
     },
     {
       "id": 2,
-      "href": "http://www.weibo.com",
-      "name": "微博",
+      "name": "博客",
+      "parentId": 0,
+      "path": "/blog",
+      "component": "IndexBlog",
+      "createTime": "2015-1-12 12:32:22",
+      "updateTime": "2015-1-12 12:32:22"
+    },
+    {
+      "id": 1,
+      "name": "更新日志",
+      "parentId": 0,
+      "path": "/changeLog",
+      "component": "IndexChangeLog",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"
     },
     {
       "id": 3,
-      "href": "http://www.zhihu.com",
-      "name": "知乎",
-      "status": "",
-      "createTime": "2015-1-12 12:32:22",
-      "updateTime": "2015-1-12 12:32:22"
-    },
-    {
-      "id": 4,
-      "href": "http://www.dreamlu.net",
-      "name": "如梦",
-      "status": "",
-      "createTime": "2015-1-12 12:32:22",
-      "updateTime": "2015-1-12 12:32:22"
-    },
-    {
-      "id": 5,
-      "href": "http://www.xiaomo.info",
-      "name": "小莫",
-      "status": "",
+      "name": "关于我",
+      "parentId": 0,
+      "path": "/aboutMe",
+      "component": "IndexAbout",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"
     }

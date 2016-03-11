@@ -15,18 +15,12 @@
 
 import React, {Component} from 'react';
 import $ from 'jquery';
-import Menu from './MenuComponent';
-import Logo from './LogoComponent';
 
-
-export default class NavBar extends Component {
+export default class IndexBlog extends Component {
 
     render() {
         return (
-            <div>
-                <Logo source="src/data/Array/options.json"/>
-                <Menu source="/src/data/KV/menu.json"/>
-            </div>
+            <div></div>
         )
     }
 

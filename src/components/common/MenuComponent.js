@@ -14,16 +14,23 @@
  **/
 
 import React, {Component} from 'react';
-import {Navbar,Nav,NavItem,NavDropdown,MenuItem} from 'react-bootstrap';
+import { Router, Route,IndexRoute, Link, browserHistory } from 'react-router'
+
 import $ from 'jquery';
 import SideBar from './SideBarComponent';
+import MyApp from './../../containers/App';
+import Index from './../index/IndexComponent';
+import IndexBlog from './../index/IndexComponent';
+import IndexChangeLog from './../index/IndexComponent';
+import IndexAbout from './../about/IndexAboutComponent';
 
 export default class Menu extends Component {
 
     state = {
         menus: [],
-        siteName: '',
-        siteUrl: ''
+        name: '',
+        path: '',
+        component: ''
     };
 
     componentDidMount() {
@@ -43,19 +50,15 @@ export default class Menu extends Component {
         if (menus.length > 0) {
             var ms = menus.map(function (menu, index) {
                 return (
-                    <MenuItem key={index} eventKey={index} href={ menu.path } className="menu-font">
-                        { menu.name }
-                    </MenuItem>
+                    <Link to={menu.path} className="menu-font" key={index}>{menu.name}</Link>
                 );
             });
         }
         return (
-            <Navbar.Collapse>
-                <Nav>
-                    {ms}
-                </Nav>
+            <div>
+                {ms}
                 <SideBar source="/src/data/KV/user.json"/>
-            </Navbar.Collapse>
+            </div>
         )
     }
 

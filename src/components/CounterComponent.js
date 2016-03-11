@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Badge } from 'antd';
+import { Badge,Button } from 'antd';
 export default class Counter extends Component {
     static propTypes = {
         increment: PropTypes.func.isRequired,
@@ -16,11 +16,11 @@ export default class Counter extends Component {
                 <Badge count={counter} style={{ backgroundColor: '#87d068' }}/>
                 <hr/>
                 <br/>
-                <button onClick={increment} className="btn btn-info">加</button>
+                <Button onClick={increment} type="primary">加</Button>
                 {' '}
-                <button onClick={decrement} className="btn btn-danger">减</button>
+                <Button onClick={decrement} type="ghost">减</Button>
                 {' '}
-                <button onClick={incrementIfOdd} className="btn btn-success">奇数加一</button>
+                <Button onClick={incrementIfOdd} type="dashed">奇数加一</Button>
             </div>
         );
     }

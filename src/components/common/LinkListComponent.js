@@ -15,12 +15,15 @@
 import React, { Component } from 'react';
 import Link from './LinkComponent';
 import $ from 'jquery';
+import { Menu, Icon } from 'antd';
 
 export default class LinkList extends Component {
     state = {
         links: [],
         name: '',
-        href: ''
+        href: '',
+        theme: 'light',
+        current: 'mail'
     };
 
     componentDidMount() {
@@ -40,19 +43,16 @@ export default class LinkList extends Component {
         if (links.length > 0) {
             var lk = links.map(function (link, index) {
                 return (
-                    <li key={index}>
-                        <a href={ link.href }>
-                            { link.name }
-                        </a>
-                    </li>
+                    <Menu.Item key={index}>
+                        <Icon type="mail"/>
+                        <a href={ link.href }>{ link.name } </a>
+                    </Menu.Item>
                 );
             });
         }
         return (
             <div>
-                <ul className="list-unstyled list-inline">
-                    友情链接：{lk}
-                </ul>
+                友情链接：{lk}
             </div>
         );
     }

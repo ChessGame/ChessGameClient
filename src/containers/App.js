@@ -5,16 +5,17 @@ import Counter from '../components/CounterComponent';
 import Footer from '../components/common/FooterComponent'
 import NavBar from '../components/common/NavbarComponent'
 import * as CounterActions from '../actions/CounterActions';
+import * as LoginActions from '../actions/LoginActions';
 
 class MyApp extends Component {
     render() {
-        const { counter, dispatch } = this.props;
+        const { login,counter, dispatch } = this.props;
         return (
             <div>
-                <NavBar/>
+                <NavBar login={login}/>
                 <Counter counter={counter}
                     {...bindActionCreators(CounterActions, dispatch)} />
-                <div><Footer/></div>
+                <Footer/>
             </div>
         );
     }
@@ -22,6 +23,7 @@ class MyApp extends Component {
 
 function select(state) {
     return {
+        login: state.login,
         counter: state.counter
     };
 }
