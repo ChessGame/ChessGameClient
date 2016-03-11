@@ -10,6 +10,10 @@
     text-align: center;
 }
 
+.li-horizontal {
+    float: left;
+}
+
 #footer a a:hover {
     color: #999 !important;
 }
