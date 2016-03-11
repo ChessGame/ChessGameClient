@@ -1,20 +1,20 @@
 {
-  "name": "counter-redux",
-  "version": "0.0.0",
-  "description": "Counter example for redux",
+  "name": "xiaomo-blog",
+  "version": "1.0.0beta",
+  "description": "redux blog",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/redux-devtools.git"
+    "url": "https://github.com/qq83387856/xiaomo-web.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/redux-devtools/issues"
+    "url": "https://github.com/qq83387856/xiaomo-web.git/issues"
   },
-  "homepage": "https://github.com/gaearon/redux-devtools#readme",
+  "homepage": "https://github.com/qq83387856/xiaomo-web.git#readme",
   "dependencies": {
     "react": "^0.14.6",
     "react-dom": "^0.14.6",

@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Xiaomo from '../components/XiaoMoComponent';
+import Counter from '../components/CounterComponent';
+import Footer from '../components/common/FooterComponent'
+import NavBar from '../components/common/NavbarComponent'
 import * as CounterActions from '../actions/CounterActions';
 
 class MyApp extends Component {
     render() {
         const { counter, dispatch } = this.props;
         return (
-            <Xiaomo counter={counter}
-                {...bindActionCreators(CounterActions, dispatch)} />
+            <div>
+                <NavBar/>
+                <Counter counter={counter}
+                    {...bindActionCreators(CounterActions, dispatch)} />
+                <div><Footer/></div>
+            </div>
         );
     }
 }
