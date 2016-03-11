@@ -60,7 +60,7 @@ export default class NavBar extends Component {
             <nav className="navbar navbar-default">
                 <div className="container-fluid">
                     <div className="navbar-header">
-                        <a className="navbar-brand" href="#">小莫</a>
+                        <a className="navbar-brand" href="/">小莫</a>
                     </div>
                     <div className="collapse navbar-collapse">
                         <ul className="nav navbar-nav">
