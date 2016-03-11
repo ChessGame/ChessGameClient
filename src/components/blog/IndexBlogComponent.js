@@ -20,7 +20,7 @@ export default class IndexBlog extends Component {
 
     render() {
         return (
-            <div></div>
+            <div>这是博客首页</div>
         )
     }
 

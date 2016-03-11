@@ -20,7 +20,7 @@ export default class IndexChangeLog extends Component {
 
     render() {
         return (
-            <div></div>
+            <div>这是更新日志首页</div>
         )
     }
 

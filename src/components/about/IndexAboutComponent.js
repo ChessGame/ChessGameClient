@@ -20,7 +20,7 @@ export default class IndexAbout extends Component {
 
     render() {
         return (
-            <div></div>
+            <div>这是关于我首页</div>
         )
     }
 
