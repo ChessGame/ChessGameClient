@@ -66,7 +66,7 @@ export default class NavBar extends Component {
                         <ul className="nav navbar-nav">
                             {ms}
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul className="nav navbar-nav navbar-right">
                             <SideBar source="/src/data/KV/user.json"/>
                         </ul>
                     </div>
