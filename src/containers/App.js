@@ -9,10 +9,10 @@ import * as LoginActions from '../actions/LoginActions';
 
 class MyApp extends Component {
     render() {
-        const { login,counter, dispatch } = this.props;
+        const {counter, dispatch } = this.props;
         return (
             <div>
-                <NavBar login={login}/>
+                <NavBar source="/src/data/KV/menu.json"/>
                 <Counter counter={counter}
                     {...bindActionCreators(CounterActions, dispatch)} />
                 <Footer/>
@@ -23,7 +23,6 @@ class MyApp extends Component {
 
 function select(state) {
     return {
-        login: state.login,
         counter: state.counter
     };
 }

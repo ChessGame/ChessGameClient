@@ -14,15 +14,9 @@
  **/
 
 import React, {Component} from 'react';
-import { Router, Route,IndexRoute, Link, browserHistory } from 'react-router'
 
 import $ from 'jquery';
-import SideBar from './SideBarComponent';
 import MyApp from './../../containers/App';
-import Index from './../index/IndexComponent';
-import IndexBlog from './../index/IndexComponent';
-import IndexChangeLog from './../index/IndexComponent';
-import IndexAbout from './../about/IndexAboutComponent';
 
 export default class Menu extends Component {
 
@@ -50,14 +44,15 @@ export default class Menu extends Component {
         if (menus.length > 0) {
             var ms = menus.map(function (menu, index) {
                 return (
-                    <Link to={menu.path} className="menu-font" key={index}>{menu.name}</Link>
+                    <Link role="presentation" to={menu.path} className="menu-font active" key={index}>{menu.name}</Link>
                 );
             });
         }
         return (
             <div>
-                {ms}
-                <SideBar source="/src/data/KV/user.json"/>
+                <ul className="nav nav-pills">
+                    {ms}
+                </ul>
             </div>
         )
     }

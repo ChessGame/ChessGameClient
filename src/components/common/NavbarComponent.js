@@ -16,17 +16,62 @@
 import React, {Component} from 'react';
 import $ from 'jquery';
 import Menu from './MenuComponent';
-import Logo from './LogoComponent';
-
+import SideBar from './SideBarComponent';
+import { Router, Route,IndexRoute, Link, browserHistory } from 'react-router'
+import Index from './../index/IndexComponent';
+import IndexBlog from './../index/IndexComponent';
+import IndexChangeLog from './../index/IndexComponent';
+import IndexAbout from './../about/IndexAboutComponent';
 
 export default class NavBar extends Component {
 
+    state = {
+        menus: [],
+        name: '',
+        path: '',
+        component: ''
+    };
+
+    componentDidMount() {
+        this.getJSON();
+    }
+
+    getJSON() {
+        $.get(this.props.source, function (result) {
+            this.setState({
+                menus: result.menus
+            });
+        }.bind(this));
+    }
+
+
     render() {
+        const { menus } = this.state;
+        if (menus.length > 0) {
+            var ms = menus.map(function (menu, index) {
+                return (
+                    <li key={index}>
+                        <Link to={menu.path} className="menu-font active">{menu.name}</Link>
+                    </li>
+                );
+            });
+        }
         return (
-            <div>
-                <Logo source="src/data/Array/options.json"/>
-                <Menu source="/src/data/KV/menu.json"/>
-            </div>
+            <nav className="navbar navbar-default">
+                <div className="container-fluid">
+                    <div className="navbar-header">
+                        <a className="navbar-brand" href="#">小莫</a>
+                    </div>
+                    <div className="collapse navbar-collapse">
+                        <ul className="nav navbar-nav">
+                            {ms}
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <SideBar source="/src/data/KV/user.json"/>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         )
     }
 

@@ -40,7 +40,7 @@ export default class SideBar extends Component {
         const {user} = this.state;
         console.log(user.headPhoto);
         return (
-            <div className="right headPhotoBox">
+            <div className="headPhotoBox">
                 <a href="http://www.xiaomo.info/api/qq" className="btn btn-default">QQ登录</a>
             </div>
         )
