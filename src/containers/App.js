@@ -14,7 +14,8 @@ import * as BlogActions from '../actions/BlogActions';
 import * as AboutMeActions from '../actions/AboutMeActions';
 import * as ChangeLogActions from '../actions/ChangeLogActions';
 
-class MyApp extends Component {
+class App extends Component {
+
     render() {
         const {counter,counterActions} = this.props;
         console.log("顶层app的counter:" + counter);
@@ -42,4 +43,4 @@ function mapDispatch(dispatch) {
     };
 }
 
-export default connect(mapState, mapDispatch)(MyApp);
+export default connect(mapState, mapDispatch)(App);
