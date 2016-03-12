@@ -1,11 +1,11 @@
- 浙ICP备15009606号
+ # 浙ICP备15009606号
  # 1 下载依赖
 ```
-<code> npm install</code>
+ npm install
 ```
  # 2 启动程序
 ```
- <code>npm start</code>
+npm start
 ```
  访问路径：http://localhost:3000
  
