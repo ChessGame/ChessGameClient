@@ -14,26 +14,25 @@ import * as LoginActions from '../actions/LoginActions';
 class MyApp extends Component {
     render() {
         const {counter,counterActions} = this.props;
+        console.log("顶层app的counter:" + counter);
         return (
             <div>
-                <NavBar source="/src/data/KV/menu.json"/>
                 <Counter counter={counter} actions={counterActions}/>
-                <Footer/>
             </div>
         );
     }
 }
 
-function select(state) {
+function mapState(state) {
     return {
         counter: state.counter
     };
 }
 
-function dispatch(dispatch) {
+function mapDispatch(dispatch) {
     return {
         counterActions: bindActionCreators(CounterActions, dispatch)
     };
 }
 
-export default connect(select, dispatch)(MyApp);
+export default connect(mapState, mapDispatch)(MyApp);

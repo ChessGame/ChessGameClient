@@ -9,8 +9,9 @@ export default class Counter extends Component {
     };
 
     render() {
-        const { increment, incrementIfOdd, decrement, counter } = this.props.actions;
-
+        const { increment, incrementIfOdd, decrement } = this.props.actions;
+        const { counter } = this.props;
+        console.log("显示层counter:" + counter);
         return (
             <div>
                 <ProgressLine percent={counter} status="active"/>
