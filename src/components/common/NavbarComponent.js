@@ -14,7 +14,6 @@
  **/
 
 import React, {Component} from 'react';
-import $ from 'jquery';
 import SideBar from './SideBarComponent';
 import { Router, Route,IndexRoute, Link, browserHistory } from 'react-router'
 import App from './../../containers/App';
@@ -22,6 +21,7 @@ import NotMatch from './../common/NotMatchComponent';
 import IndexBlog from './../blog/IndexBlogComponent';
 import IndexChangeLog from './../changeLog/IndexChangeLogComponent';
 import IndexAbout from './../about/IndexAboutComponent';
+import fetch from 'whatwg-fetch';
 
 export default class NavBar extends Component {
 
@@ -33,17 +33,20 @@ export default class NavBar extends Component {
     };
 
     componentDidMount() {
-        this.getJSON();
+        const source = this.props.source;
+        console.log("navbar URL:" + source);
+        fetch(source)
+            .then(result=> {
+                if (result.ok) {
+                    this.setState({
+                        menus: result.menus
+                    });
+                } else {
+                    console.log("Looks like the response wasn't perfect, got status", result.status);
+                }
+            })
+            .catch(err=>console.log(err));
     }
-
-    getJSON() {
-        $.get(this.props.source, function (result) {
-            this.setState({
-                menus: result.menus
-            });
-        }.bind(this));
-    }
-
 
     render() {
         const { menus } = this.state;
@@ -67,7 +70,9 @@ export default class NavBar extends Component {
                             {ms}
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            <SideBar source="/src/data/KV/user.json"/>
+                            {
+                                //<SideBar source="/src/data/KV/user.json"/>
+                            }
                         </ul>
                     </div>
                 </div>

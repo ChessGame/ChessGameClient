@@ -13,35 +13,25 @@
  * @Copyright(©) 2015 by xiaomo.
  **/
 
-import React, {Component} from 'react';
-import $ from 'jquery';
+import React, {PropTypes,Component} from 'react';
 
 export default class SideBar extends Component {
+    static propTypes = {
+        login: PropTypes.func.isRequired
+    };
 
     state = {
         user: {},
-        name: '',
+        nickName: '',
         headPhoto: ''
     };
 
-    componentDidMount() {
-        this.getJSON();
-    }
-
-    getJSON() {
-        $.get(this.props.source, function (result) {
-            this.setState({
-                user: result
-            });
-        }.bind(this));
-    }
-
     render() {
-        const {user} = this.state;
+        const {user} = this.props;
         console.log(user.headPhoto);
         return (
             <div className="headPhotoBox">
-                <a href="http://www.xiaomo.info/api/qq" className="btn btn-default">QQ登录</a>
+                <a href=""><img src={user.headPhoto} alt={user.nickName}/></a>
             </div>
         )
     }

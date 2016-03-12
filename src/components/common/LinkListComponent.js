@@ -14,7 +14,7 @@
  **/
 import React, { Component } from 'react';
 import Link from './LinkComponent';
-import $ from 'jquery';
+import fetch from 'whatwg-fetch';
 
 export default class LinkList extends Component {
     state = {
@@ -24,15 +24,14 @@ export default class LinkList extends Component {
     };
 
     componentDidMount() {
-        this.getJSON();
-    }
-
-    getJSON() {
-        $.get(this.props.source, function (result) {
-            this.setState({
-                links: result.links
-            });
-        }.bind(this));
+        const source = this.props.source;
+        fetch(source)
+            .then(result=> {
+                this.setState({
+                    links: result.links
+                });
+            })
+            .catch(err=>console.log(err));
     }
 
     render() {

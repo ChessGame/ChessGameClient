@@ -14,11 +14,23 @@
  **/
 
 import * as types from '../constants/ActionTypes';
+import fetch from 'whatwg-fetch';
+import handleActionError from '../utils/handle-action-error'
+import processResponse from '../utils/process-response'
 
-export default function login(state = 0, action) {
+const LOGIN_API = 'https://www.xiaomo.info';
+
+export default function login(state = [], action) {
     switch (action.type) {
         case types.LOGIN:
-            return state + 1;
+            fetch({LOGIN_API}
+                .then(processResponse)
+                .then(res => dispatch({
+                    type: types.LOGIN,
+                    user: res
+                }))
+                .catch(error => handleActionError(dispatch, error, types.LOGIN)));
+            return user;
         default:
             return state;
     }
