@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import 'antd/lib/index.css';
+import '../../main.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
 import Counter from '../components/CounterComponent';
 import Footer from '../components/common/FooterComponent'
 import NavBar from '../components/common/NavbarComponent'
@@ -9,12 +13,11 @@ import * as LoginActions from '../actions/LoginActions';
 
 class MyApp extends Component {
     render() {
-        const {counter, dispatch } = this.props;
+        const {counter} = this.props;
         return (
             <div>
                 <NavBar source="/src/data/KV/menu.json"/>
-                <Counter counter={counter}
-                    {...bindActionCreators(CounterActions, dispatch)} />
+                <Counter counter={counter}/>
                 <Footer/>
             </div>
         );
@@ -27,4 +30,10 @@ function select(state) {
     };
 }
 
-export default connect(select)(MyApp);
+function dispatch(dispatch) {
+    return {
+        actions: bindActionCreators(CounterActions, dispatch)
+    };
+}
+
+export default connect(select, dispatch)(MyApp);
