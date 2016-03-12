@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-
 import { Router, Route, Link, browserHistory } from 'react-router'
-
-import App from './../App';
 import DevTools from './DevTools';
 
+import App from './../App';
 import indexAbout from '../../components/about/IndexAboutComponent';
 import indexBlog from '../../components/blog/IndexBlogComponent';
 import indexChangeLog from '../../components/changeLog/IndexChangeLogComponent';
