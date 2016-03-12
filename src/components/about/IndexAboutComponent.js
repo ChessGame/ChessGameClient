@@ -14,7 +14,6 @@
  **/
 
 import React, {Component} from 'react';
-import $ from 'jquery';
 
 export default class IndexAbout extends Component {
 
