@@ -9,7 +9,10 @@ import Counter from '../components/CounterComponent';
 import Footer from '../components/common/FooterComponent'
 import NavBar from '../components/common/NavbarComponent'
 import * as CounterActions from '../actions/CounterActions';
-import * as LoginActions from '../actions/LoginActions';
+import * as IndexActions from '../actions/IndexActions';
+import * as BlogActions from '../actions/BlogActions';
+import * as AboutMeActions from '../actions/AboutMeActions';
+import * as ChangeLogActions from '../actions/ChangeLogActions';
 
 class MyApp extends Component {
     render() {
@@ -31,7 +34,11 @@ function mapState(state) {
 
 function mapDispatch(dispatch) {
     return {
-        counterActions: bindActionCreators(CounterActions, dispatch)
+        counterActions: bindActionCreators(CounterActions, dispatch),
+        indexActions: bindActionCreators(IndexActions, dispatch),
+        blogActions: bindActionCreators(BlogActions, dispatch),
+        aboutMeActions: bindActionCreators(AboutMeActions, dispatch),
+        changeLogActions: bindActionCreators(ChangeLogActions, dispatch)
     };
 }
 
