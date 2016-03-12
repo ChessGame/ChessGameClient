@@ -4,33 +4,12 @@ const ProgressLine = Progress.Line;
 
 export default class Counter extends Component {
     static propTypes = {
-        increment: PropTypes.func.isRequired,
-        incrementIfOdd: PropTypes.func.isRequired,
-        decrement: PropTypes.func.isRequired,
-        counter: PropTypes.number.isRequired
+        counter: PropTypes.number.isRequired,
+        actions: PropTypes.object.isRequired
     };
-    state = {
-        status: 'false'
-    };
-
-    componentDidMount() {
-        this.getStatus();
-    }
-
-    getStatus() {
-        if (this.props.counter >= 10 || this.props.counter <= 0) {
-            this.setState({
-                status: 'true'
-            })
-        } else {
-            this.setState({
-                status: 'false'
-            })
-        }
-    }
 
     render() {
-        const { increment, incrementIfOdd, decrement, counter } = this.props;
+        const { increment, incrementIfOdd, decrement, counter } = this.props.actions;
 
         return (
             <div>
