@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import configureStore from './store/configureStore';
-import Root from './containers/Root';
+import Root from './containers/root/Root';
 import 'antd/lib/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 const store = configureStore();

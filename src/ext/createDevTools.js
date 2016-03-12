@@ -41,7 +41,7 @@ export default function createDevTools(children) {
             }
 
             if (!this.liftedStore) {
-                console.error(
+                console.info(
                     'Redux DevTools could not render. Did you forget to include ' +
                     'DevTools.instrument() in your store enhancer chain before ' +
                     'using createStore()?'
