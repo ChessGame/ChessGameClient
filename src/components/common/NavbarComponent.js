@@ -15,7 +15,6 @@
 
 import React, {Component} from 'react';
 import $ from 'jquery';
-import Menu from './MenuComponent';
 import SideBar from './SideBarComponent';
 import { Router, Route,IndexRoute, Link, browserHistory } from 'react-router'
 import App from './../../containers/App';
