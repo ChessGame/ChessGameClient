@@ -43,8 +43,6 @@ module.exports = {
             test: /\.(gif|jpg|png|woff|woff2|svg|eot|ttf)$/,
             loaders: ['url-loader?limit=8192']
         },
-            {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'},
-
             {test: /\.css$/, loader: 'style-loader!css-loader'},
 
             {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
