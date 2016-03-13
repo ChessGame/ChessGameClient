@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, Link, browserHistory } from 'react-router'
 import DevTools from './DevTools';
 
-import App from './../App';
+import App from '../App';
 import indexAbout from '../../components/about/IndexAboutComponent';
 import indexBlog from '../../components/blog/IndexBlogComponent';
 import indexChangeLog from '../../components/changeLog/IndexChangeLogComponent';
@@ -27,8 +27,10 @@ export default class Root extends Component {
         const { store } = this.props;
         return (
             <Provider store={store}>
-                {component}
-                <DevTools />
+                <div>
+                    {component}
+                    <DevTools />
+                </div>
             </Provider>
         );
     }
