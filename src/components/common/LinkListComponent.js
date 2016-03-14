@@ -14,7 +14,6 @@
  **/
 import React, { Component } from 'react';
 import Link from './LinkComponent';
-import fetch from 'whatwg-fetch';
 
 export default class LinkList extends Component {
     state = {
@@ -26,6 +25,7 @@ export default class LinkList extends Component {
     componentDidMount() {
         const source = this.props.source;
         fetch(source)
+            .then(result=>result.json())
             .then(result=> {
                 this.setState({
                     links: result.links

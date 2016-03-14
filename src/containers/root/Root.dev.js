@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { Router, Route,IndexRoute, Link, browserHistory } from 'react-router'
+import { Router, Route,IndexRoute,IndexLink, Link, browserHistory } from 'react-router'
 import DevTools from './DevTools';
 
 import App from '../App';
@@ -14,7 +14,7 @@ export default class Root extends Component {
     render() {
         const routes = (
             <Route path="/" component={App}>
-                <IndexRoute path="/" component={indexXiaoMo}/>
+                <IndexRoute component={indexXiaoMo}/>
                 <Route path="blog" component={indexBlog}/>
                 <Route path="changeLog" component={indexChangeLog}/>
                 <Route path="about" component={indexAbout}/>

@@ -3,6 +3,9 @@ var webpack = require('webpack');
 var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 var hotModuleReplacementPlugin = new webpack.HotModuleReplacementPlugin();
 var noErrorsPlugin = new webpack.NoErrorsPlugin();
+var whatWgFetchPlugin = new webpack.ProvidePlugin({
+    'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+});
 module.exports = {
     devtool: 'eval',
     entry: [
@@ -18,17 +21,20 @@ module.exports = {
     plugins: [
         hotModuleReplacementPlugin,
         noErrorsPlugin,
-        commonsPlugin
+        commonsPlugin,
+        whatWgFetchPlugin
     ],
     resolve: {
         alias: {
             'redux-devtools': path.join(__dirname, 'src', 'ext'),
             'react': path.join(__dirname, 'node_modules', 'react')
         }
-    },
+    }
+    ,
     resolveLoader: {
         'fallback': path.join(__dirname, 'node_modules')
-    },
+    }
+    ,
     module: {
         loaders: [{
             test: /\.js$/,
@@ -48,4 +54,5 @@ module.exports = {
             {test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
         ]
     }
-};
+}
+;

@@ -14,37 +14,36 @@
  **/
 import React, { Component } from 'react';
 import Link from './LinkComponent';
-import fetch from 'whatwg-fetch';
 
 export default class CopyRight extends Component {
     state = {
-        copyright: [],
+        copyright: null,
         year: 0,
         siteName: '',
-        recordNumber: ''
+        recordNumber: '',
+        beian: ''
     };
 
     componentDidMount() {
         const source = this.props.source;
+        console.log(source);
         fetch(source)
-            .then(result => {
-                if (result.ok) {
-                    this.setState({
-                        copyright: result
-                    })
-                } else {
-                    console.log("Looks like the response wasn't perfect, got status", result.status);
-                }
+            .then(result=>result.json())
+            .then(data => {
+                this.setState({
+                    copyright: data
+                })
             })
             .catch(err=>console.log(err));
     }
 
     render() {
         const { copyright } = this.state;
+        console.log(copyright);
         return (
             <div>
                 CopyRight © { copyright.year } { copyright.siteName },Inc. All Rights Reserved.
-                备案号：<a href="http://icp.alexa.cn/">{ copyright.recordNumber }</a>
+                备案号：<a href={copyright.beian}>{ copyright.recordNumber }</a>
             </div>
         );
     }
