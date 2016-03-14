@@ -14,11 +14,7 @@
  **/
 
 import * as types from '../constants/ActionTypes';
-import fetch from 'whatwg-fetch';
-import handleActionError from '../utils/handle-action-error'
-import processResponse from '../utils/process-response'
 
-const LOGIN_API = 'https://www.xiaomo.info';
 
 export default function login(state = [], action) {
     switch (action.type) {

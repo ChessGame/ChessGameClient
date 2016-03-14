@@ -14,9 +14,6 @@
  **/
 
 import * as types from '../constants/ActionTypes';
-import fetch from 'whatwg-fetch';
-import handleActionError from '../utils/handle-action-error'
-import processResponse from '../utils/process-response'
 
 export default function changeLog(state = [], action) {
     switch (action.type) {
