@@ -15,35 +15,30 @@
 
 import React, {Component} from 'react';
 import SideBar from './SideBarComponent';
-import { Router, Route,IndexRoute, Link, browserHistory } from 'react-router'
+import { Router, Route, Link,IndexLink, browserHistory } from 'react-router'
 import App from './../../containers/App';
 import NotMatch from './../common/NotMatchComponent';
 import IndexBlog from './../blog/IndexBlogComponent';
 import IndexChangeLog from './../changeLog/IndexChangeLogComponent';
 import IndexAbout from './../about/IndexAboutComponent';
-import fetch from 'whatwg-fetch';
 
 export default class NavBar extends Component {
 
     state = {
         menus: [],
         name: '',
-        path: '',
-        component: ''
+        path: ''
     };
 
     componentDidMount() {
         const source = this.props.source;
         console.log("navbar URL:" + source);
         fetch(source)
-            .then(result=> {
-                if (result.ok) {
-                    this.setState({
-                        menus: result.menus
-                    });
-                } else {
-                    console.log("Looks like the response wasn't perfect, got status", result.status);
-                }
+            .then(result=>result.json())
+            .then(data=> {
+                this.setState({
+                    menus: data.menus
+                });
             })
             .catch(err=>console.log(err));
     }
@@ -53,8 +48,7 @@ export default class NavBar extends Component {
         if (menus.length > 0) {
             var ms = menus.map(function (menu, index) {
                 return (
-                    <li key={index}>
-                        <Link to={menu.path} className="menu-font active">{menu.name}</Link>
+                    <li className="menu-font active" key={index}><Link to={menu.path}>{menu.name}</Link>
                     </li>
                 );
             });
@@ -63,15 +57,16 @@ export default class NavBar extends Component {
             <nav className="navbar navbar-default">
                 <div className="container-fluid">
                     <div className="navbar-header">
-                        <a className="navbar-brand" href="/">小莫</a>
+                        <IndexLink className="navbar-brand" to={`/`}>{'小莫'}</IndexLink>
                     </div>
                     <div className="collapse navbar-collapse">
                         <ul className="nav navbar-nav">
+                            <li className="list-unstyled"><IndexLink to={`/`}>{'首页'}</IndexLink></li>
                             {ms}
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             {
-                                //<SideBar source="/src/data/KV/user.json"/>
+                                //<SideBar source="/src/data/user.json"/>
                             }
                         </ul>
                     </div>
