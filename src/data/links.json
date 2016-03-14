@@ -2,37 +2,29 @@
   "links": [
     {
       "id": 1,
-      "name": "首页",
-      "parentId": 3,
-      "path": "/index",
-      "component": "Index",
+      "name": "百度",
+      "href": "http://www.baidu.com",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"
     },
     {
       "id": 2,
-      "name": "博客",
-      "parentId": 0,
-      "path": "/blog",
-      "component": "IndexBlog",
+      "name": "搜狐",
+      "href": "http://www.souhu.com",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"
     },
     {
       "id": 1,
-      "name": "更新日志",
-      "parentId": 0,
-      "path": "/changeLog",
-      "component": "IndexChangeLog",
+      "name": "谷歌",
+      "href": "http://www.google.cn",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"
     },
     {
       "id": 3,
-      "name": "关于我",
-      "parentId": 0,
-      "path": "/aboutMe",
-      "component": "IndexAbout",
+      "name": "腾讯",
+      "href": "http://www.tencent.com",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"
     }

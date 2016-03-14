@@ -21,6 +21,7 @@ export default class Footer extends Component {
     render() {
         return (
             <footer id="footer">
+                <LinkList source="/src/data/links.json"/>
                 <CopyRight source="/src/data/options.json"/>
             </footer>
         );

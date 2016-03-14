@@ -38,6 +38,7 @@ export default class LinkList extends Component {
         const { links } = this.state;
         if (links.length > 0) {
             var lk = links.map(function (link, index) {
+                console.log(link);
                 return (
                     <li key={index}>
                         <a href={ link.href }>

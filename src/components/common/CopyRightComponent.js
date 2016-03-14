@@ -17,7 +17,7 @@ import Link from './LinkComponent';
 
 export default class CopyRight extends Component {
     state = {
-        copyright: null,
+        copyright: {},
         year: 0,
         siteName: '',
         recordNumber: '',
@@ -38,7 +38,7 @@ export default class CopyRight extends Component {
     }
 
     render() {
-        const { copyright } = this.state;
+        const {copyright}  = this.state;
         console.log(copyright);
         return (
             <div>
