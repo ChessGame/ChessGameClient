@@ -17,6 +17,11 @@ import * as types from '../constants/ActionTypes';
 import handleActionError from '../utils/handle-action-error'
 import processResponse from '../utils/process-response'
 
+const initialState = {
+    login: types.LOGIN,
+    user: null
+};
+
 export default function login(user = null, action) {
     switch (action.type) {
         case types.LOGIN:
