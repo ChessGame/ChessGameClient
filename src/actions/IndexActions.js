@@ -13,11 +13,70 @@
  * @Copyright(©) 2015 by xiaomo.
  **/
 
-import * as types from '../constants/ActionTypes';
+import * as actionTypes from '../constants/ActionTypes';
 
-export function LOGIN() {
+const initialState = {
+    loggingIn: false
+};
+
+export default function reducer(state = initialState, action = {}) {
+    switch (action.type) {
+        case actionTypes.LOGIN:
+            return {
+                ...state,
+                loggingIn: true
+            };
+        case actionTypes.LOGIN_SUCCESS:
+            return {
+                ...state,
+                loggingIn: false,
+                user: action.result
+            };
+        case actionTypes.LOGIN_FAIL:
+            return {
+                ...state,
+                loggingIn: false,
+                user: null,
+                loginError: action.error
+            };
+        case actionTypes.LOGOUT:
+            return {
+                ...state,
+                loggingOut: true
+            };
+        case actionTypes.LOGOUT_SUCCESS:
+            return {
+                ...state,
+                loggingOut: false,
+                user: null
+            };
+        case actionTypes.LOGOUT_FAIL:
+            return {
+                ...state,
+                loggingOut: false,
+                logoutError: action.error
+            };
+        default:
+            return state;
+    }
+}
+
+
+export function login() {
     return {
-        type: types.LOGIN,
-        index: 1
+        types: [actionTypes.LOGIN, actionTypes.LOGIN_SUCCESS, actionTypes.LOGIN_FAIL],
+        promise: (fetch('http://www.xiaomo.info/api/login')
+                .then(result=>result.json())
+        )
     };
 }
+
+export function logout() {
+    return {
+        types: [actionTypes.LOGOUT, actionTypes.LOGOUT_SUCCESS, actionTypes.LOGOUT_FAIL],
+        promise: (fetch('http://www.xiaomo.info/api/logout')
+                .then(result=>result.json())
+        )
+    };
+}
+

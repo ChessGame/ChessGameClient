@@ -8,7 +8,12 @@ export const LOCALE_SWITCHED = 'LOCALE_SWITCHED';//本地转换
 
 
 export const LOGIN = 'LOGIN';//登录
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'; //登录成功
+export const LOGIN_FAIL = 'LOGIN_FAIL'; //登录失败
+
 export const LOGOUT = 'LOGOUT';//注销
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS'; //注销成功
+export const LOGOUT_FAIL = 'LOGOUT_FAIL'; //注销失败
 
 
 export const SHOW_BLOG_LIST = 'SHOW_BLOG_LIST'; //显示博客列表

@@ -17,11 +17,11 @@ import * as types from '../constants/ActionTypes';
 import handleActionError from '../utils/handle-action-error'
 import processResponse from '../utils/process-response'
 
-export default function login(state = [], action) {
+export default function login(user = null, action) {
     switch (action.type) {
         case types.LOGIN:
             return user;
         default:
-            return state;
+            return user;
     }
 }

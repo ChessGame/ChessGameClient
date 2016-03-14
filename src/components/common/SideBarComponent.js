@@ -17,21 +17,15 @@ import React, {PropTypes,Component} from 'react';
 
 export default class SideBar extends Component {
     static propTypes = {
-        login: PropTypes.func.isRequired
-    };
-
-    state = {
-        user: {},
-        nickName: '',
-        headPhoto: ''
+        actions: PropTypes.object.isRequired
     };
 
     render() {
+        const { login,logout } = this.props.actions;
         const {user} = this.props;
-        console.log(user.headPhoto);
         return (
-            <div className="headPhotoBox">
-                <a href=""><img src={user.headPhoto} alt={user.nickName}/></a>
+            <div >
+                <a href="" className="btn btn-success" onClick={login}>QQ登录</a>
             </div>
         )
     }
