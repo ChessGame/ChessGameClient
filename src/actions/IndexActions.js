@@ -15,9 +15,17 @@
 
 import * as actionTypes from '../constants/ActionTypes';
 
+
+const initialState = {
+    user: null
+};
+
 export function login() {
+    fetch(this.props.url)
+        .then(result=>result.json());
     return {
         type: actionTypes.LOGIN,
+        result,
         index: 1
     };
 }
