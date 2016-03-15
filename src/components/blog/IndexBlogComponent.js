@@ -14,12 +14,15 @@
  **/
 
 import React, {Component} from 'react';
+import Blog from '../blog/BlogComponent';
 
 export default class IndexBlog extends Component {
 
     render() {
         return (
-            <div>这是博客首页</div>
+            <div>
+                <Blog/>
+            </div>
         )
     }
 
