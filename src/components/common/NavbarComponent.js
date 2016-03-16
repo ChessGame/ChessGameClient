@@ -13,7 +13,9 @@
  * @Copyright(©) 2015 by xiaomo.
  **/
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import SideBar from './SideBarComponent';
 import { Router, Route, Link,IndexLink, browserHistory } from 'react-router'
 import App from './../../containers/App';
@@ -21,7 +23,7 @@ import NotMatch from './../common/NotMatchComponent';
 import IndexBlog from './../blog/IndexBlogComponent';
 import IndexChangeLog from './../changeLog/IndexChangeLogComponent';
 import IndexAbout from './../about/IndexAboutComponent';
-
+import * as IndexActions from './../../actions/IndexActions';
 export default class NavBar extends Component {
 
     state = {
@@ -45,10 +47,12 @@ export default class NavBar extends Component {
 
     render() {
         const { menus } = this.state;
+        const {loginActions} = this.props;
         if (menus.length > 0) {
             var ms = menus.map(function (menu, index) {
                 return (
-                    <li className="menu-font active" key={index}><Link to={menu.path}>{menu.name}</Link>
+                    <li className="menu-font active" key={index}>
+                        <Link to={menu.path}>{menu.name}</Link>
                     </li>
                 );
             });
@@ -65,9 +69,7 @@ export default class NavBar extends Component {
                             {ms}
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            {
-                                //<SideBar source="/src/data/user.json"/>
-                            }
+                            <SideBar actions={loginActions}/>
                         </ul>
                     </div>
                 </div>
@@ -76,3 +78,10 @@ export default class NavBar extends Component {
     }
 
 }
+
+function mapDispatch(dispatch) {
+    return {
+        loginActions: bindActionCreators(IndexActions, dispatch)
+    };
+}
+export default connect(mapDispatch)(NavBar);

@@ -15,36 +15,26 @@
 
 import * as actionTypes from '../constants/ActionTypes';
 
-
-const initialState = {
-    user: null
+export const login = ()=> {
+    return (dispatch)=> {
+        loginFetch(dispatch);
+    }
 };
 
-export function login() {
-    fetch(this.props.url)
-        .then(result=>result.json());
-    return {
-        type: actionTypes.LOGIN,
-        result,
-        index: 1
-    };
-}
-
-export function loginFetch() {
-    return {
-        types: [actionTypes.LOGIN, actionTypes.LOGIN_SUCCESS, actionTypes.LOGIN_FAIL],
-        promise: (fetch('http://www.xiaomo.info/api/login')
-                .then(result=>result.json())
-        )
-    };
-}
-
-export function logout() {
-    return {
-        types: [actionTypes.LOGOUT, actionTypes.LOGOUT_SUCCESS, actionTypes.LOGOUT_FAIL],
-        promise: (fetch('http://www.xiaomo.info/api/logout')
-                .then(result=>result.json())
-        )
-    };
+export function loginFetch(dispatch) {
+    fetch("http://www.xiaomo.info/api/qq")
+        .then(response=>response.json())
+        .then(data=> {
+            dispatch({
+                type: actionTypes.LOGIN_SUCCESS,
+                result: data
+            })
+        })
+        .catch(e=> {
+            dispatch({
+                type: actionTypes.LOGIN_FAIL,
+                err: e
+            })
+        })
 }
 

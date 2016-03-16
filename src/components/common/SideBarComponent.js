@@ -14,20 +14,18 @@
  **/
 
 import React, {PropTypes,Component} from 'react';
-
 export default class SideBar extends Component {
+
     static propTypes = {
         actions: PropTypes.object.isRequired
     };
 
     render() {
-        const { login,logout } = this.props.actions;
-        const {user} = this.props;
+        const { login} = this.props.actions;
         return (
             <div >
-                <a href="" className="btn btn-success" onClick={login}>QQ登录</a>
+                <a className="btn btn-success" onClick={login}>QQ登录</a>
             </div>
         )
     }
-
 }
