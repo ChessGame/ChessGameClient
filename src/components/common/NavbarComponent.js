@@ -79,9 +79,16 @@ export default class NavBar extends Component {
 
 }
 
+
+function mapState(state) {
+    return {
+        state
+    };
+}
+
 function mapDispatch(dispatch) {
     return {
         loginActions: bindActionCreators(IndexActions, dispatch)
     };
 }
-export default connect(mapDispatch)(NavBar);
+export default connect(mapState, mapDispatch)(NavBar);
