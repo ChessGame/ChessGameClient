@@ -4,7 +4,7 @@ var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 var hotModuleReplacementPlugin = new webpack.HotModuleReplacementPlugin();
 var noErrorsPlugin = new webpack.NoErrorsPlugin();
 var whatWgFetchPlugin = new webpack.ProvidePlugin({
-    'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+    'fetch': 'imports?this=>global!exports?global.fetch!isomorphic-fetch'
 });
 module.exports = {
     devtool: 'eval',
