@@ -14,8 +14,6 @@
  **/
 
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import SideBar from './SideBarComponent';
 import { Router, Route, Link,IndexLink, browserHistory } from 'react-router'
 import App from './../../containers/App';
@@ -23,7 +21,6 @@ import NotMatch from './../common/NotMatchComponent';
 import IndexBlog from './../blog/IndexBlogComponent';
 import IndexChangeLog from './../changeLog/IndexChangeLogComponent';
 import IndexAbout from './../about/IndexAboutComponent';
-import * as IndexActions from './../../actions/IndexActions';
 export default class NavBar extends Component {
 
     state = {
@@ -47,7 +44,7 @@ export default class NavBar extends Component {
 
     render() {
         const { menus } = this.state;
-        const {loginActions} = this.props;
+        //const {loginActions} = this.props;
         if (menus.length > 0) {
             var ms = menus.map(function (menu, index) {
                 return (
@@ -69,7 +66,9 @@ export default class NavBar extends Component {
                             {ms}
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            <SideBar actions={loginActions}/>
+                            {
+                                //<SideBar actions={loginActions}/>
+                            }
                         </ul>
                     </div>
                 </div>
@@ -80,15 +79,15 @@ export default class NavBar extends Component {
 }
 
 
-function mapState(state) {
-    return {
-        state
-    };
-}
-
-function mapDispatch(dispatch) {
-    return {
-        loginActions: bindActionCreators(IndexActions, dispatch)
-    };
-}
-export default connect(mapState, mapDispatch)(NavBar);
+//function mapState(state) {
+//    return {
+//        state
+//    };
+//}
+//
+//function mapDispatch(dispatch) {
+//    return {
+//        loginActions: bindActionCreators(IndexActions, dispatch)
+//    };
+//}
+//export default connect(mapState, mapDispatch)(NavBar);
