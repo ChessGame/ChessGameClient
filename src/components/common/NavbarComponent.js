@@ -13,14 +13,8 @@
  * @Copyright(©) 2015 by xiaomo.
  **/
 
-import React, { Component } from 'react';
-import SideBar from './SideBarComponent';
-import { Router, Route, Link,IndexLink, browserHistory } from 'react-router'
-import App from './../../containers/App';
-import NotMatch from './../common/NotMatchComponent';
-import IndexBlog from './../blog/IndexBlogComponent';
-import IndexChangeLog from './../changeLog/IndexChangeLogComponent';
-import IndexAbout from './../about/IndexAboutComponent';
+import React, {Component} from "react";
+import {Router, Route, Link, IndexLink, browserHistory} from "react-router";
 export default class NavBar extends Component {
 
     state = {
@@ -43,13 +37,12 @@ export default class NavBar extends Component {
     }
 
     render() {
-        const { menus } = this.state;
-        //const {loginActions} = this.props;
+        const {menus} = this.state;
         if (menus.length > 0) {
             var ms = menus.map(function (menu, index) {
                 return (
-                    <li className="menu-font active" key={index}>
-                        <Link to={menu.path}>{menu.name}</Link>
+                    <li className="menu-font active">
+                        <Link key={index} to={menu.path}>{menu.name}</Link>
                     </li>
                 );
             });
@@ -65,11 +58,6 @@ export default class NavBar extends Component {
                             <li className="list-unstyled"><IndexLink to={`/`}>{'首页'}</IndexLink></li>
                             {ms}
                         </ul>
-                        <ul className="nav navbar-nav navbar-right">
-                            {
-                                //<SideBar actions={loginActions}/>
-                            }
-                        </ul>
                     </div>
                 </div>
             </nav>
@@ -78,16 +66,3 @@ export default class NavBar extends Component {
 
 }
 
-
-//function mapState(state) {
-//    return {
-//        state
-//    };
-//}
-//
-//function mapDispatch(dispatch) {
-//    return {
-//        loginActions: bindActionCreators(IndexActions, dispatch)
-//    };
-//}
-//export default connect(mapState, mapDispatch)(NavBar);

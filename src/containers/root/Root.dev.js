@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import { Router, Route,IndexRoute,IndexLink, Link, browserHistory } from 'react-router'
-import DevTools from './DevTools';
-
-import App from '../App';
-import indexAbout from '../../components/about/IndexAboutComponent';
-import indexBlog from '../../components/blog/IndexBlogComponent';
-import indexChangeLog from '../../components/changeLog/IndexChangeLogComponent';
-import indexXiaoMo from '../../components/index/IndexComponent';
-import NotMatch from '../../components/common/NotMatchComponent';
+import React, {Component} from "react";
+import {Provider} from "react-redux";
+import {Router, Route, IndexRoute, IndexLink, Link, browserHistory} from "react-router";
+import DevTools from "./DevTools";
+import App from "../App";
+import indexBlog from "../../components/blog/IndexBlogComponent";
+import indexXiaoMo from "../../components/index/IndexComponent";
+import NotMatch from "../../components/common/NotMatchComponent";
 
 export default class Root extends Component {
 
@@ -32,7 +29,7 @@ export default class Root extends Component {
     }
 
     render() {
-        const { menus } = this.state;
+        const {menus} = this.state;
         if (menus.length > 0) {
             var rs = menus.map(function (menu, index) {
                 return (
@@ -41,7 +38,7 @@ export default class Root extends Component {
             });
         }
 
-        const { store } = this.props;
+        const {store} = this.props;
         return (
             <Provider store={store}>
                 <div>
