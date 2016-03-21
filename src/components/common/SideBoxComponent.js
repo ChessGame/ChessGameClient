@@ -13,63 +13,17 @@
  * @Copyright(©) 2015 by xiaomo.
  **/
 import React, {Component} from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import {Carousel} from "antd";
 export default class SideBox extends Component {
 
     render() {
-        var settings = {
-            className: '',
-            accessibility: true,
-            adaptiveHeight: false,
-            arrows: true,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            centerMode: true,
-            centerPadding: '50px',
-            cssEase: 'ease',
-            dots: false,
-            dotsClass: 'slick-dots',
-            draggable: true,
-            easing: 'linear',
-            edgeFriction: 0.35,
-            fade: false,
-            focusOnSelect: false,
-            infinite: true,
-            initialSlide: 0,
-            lazyLoad: true,
-            pauseOnHover: false,
-            responsive: null,
-            rtl: false,
-            slide: 'div',
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            speed: 500,
-            swipe: true,
-            swipeToSlide: false,
-            touchMove: true,
-            touchThreshold: 5,
-            useCSS: true,
-            variableWidth: false,
-            vertical: false,
-            waitForAnimate: true,
-            afterChange: null,
-            beforeChange: null,
-            edgeEvent: null,
-            init: null,
-            swipeEvent: null,
-            nextArrow: null,
-            prevArrow: null
-        };
         return (
-            <Slider {...settings}>
-                <div><h5><img src="/images/banner0.jpg" alt=""/></h5></div>
-                <div><h5><img src="/images/banner1.jpg" alt=""/></h5></div>
-                <div><h5><img src="/images/banner2.jpg" alt=""/></h5></div>
-                <div><h5><img src="/images/banner3.jpg" alt=""/></h5></div>
-            </Slider>
+            <Carousel effect="fade" autoplay="true" dots="true">
+                <div><h3><img src="/images/banner0.jpg" alt=""/></h3></div>
+                <div><h3><img src="/images/banner1.jpg" alt=""/></h3></div>
+                <div><h3><img src="/images/banner2.jpg" alt=""/></h3></div>
+                <div><h3><img src="/images/banner3.jpg" alt=""/></h3></div>
+            </Carousel>
         );
     }
-
 }
