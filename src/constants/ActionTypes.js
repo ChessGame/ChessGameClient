@@ -17,7 +17,9 @@ export const LOGOUT_FAIL = 'LOGOUT_FAIL'; //注销失败
 
 
 export const SHOW_BLOG_LIST = 'SHOW_BLOG_LIST'; //显示博客列表
-
+export const SHOW_MODAL = 'SHOW_MODAL';
+export const HANDLE_OK = 'HANDLE_OK';
+export const HANDLE_CANCEL = 'HANDLE_CANCEL';
 
 export const SHOW_CHANGE_LOG = 'SHOW_CHANGE_LOG'; //显示更新日志
 

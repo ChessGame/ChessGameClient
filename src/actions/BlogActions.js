@@ -13,11 +13,42 @@
  * @Copyright(©) 2015 by xiaomo.
  **/
 
-import * as types from '../constants/ActionTypes';
+import * as types from "../constants/ActionTypes";
 
-export function LOGIN() {
+
+/**
+ * 显示模块内容
+ * @returns {{type, index: number}}
+ */
+export function showModal() {
     return {
-        type: types.LOGIN,
+        type: types.SHOW_MODAL,
+        visible,
         index: 1
     };
+}
+
+/**
+ * ok
+ * @returns {{type, index: number}}
+ */
+export function handleOk() {
+    return {
+        type: types.HANDLE_OK,
+        visible,
+        index: 2
+    };
+}
+
+/**
+ * cancel
+ * @returns {{type, index: number}}
+ */
+export function handleCancel() {
+    return {
+        type: types.HANDLE_CANCEL,
+        visible,
+        index: 3
+    };
+
 }

@@ -13,13 +13,32 @@
  * @Copyright(©) 2015 by xiaomo.
  **/
 import React, {Component} from "react";
-import SideBox from "../common/SideBoxComponent";
+import {bindActionCreators} from "redux";
+import {connect} from "react-redux";
+import BlogList from "../blog/BlogListComponent";
+import * as BlogActions from "./../../actions/BlogActions";
 export default class Blog extends Component {
 
     render() {
+        const {visible, blogActions} = this.props;
+        console.log(blogActions);
         return (
-            <SideBox/>
+            <BlogList source="/src/data/blogs.json" visible={visible} actions={blogActions}/>
         )
     }
 
 }
+
+function mapState(state) {
+    return {
+        visible: state.visible
+    };
+}
+
+function mapDispatch(dispatch) {
+    return {
+        blogActions: bindActionCreators(BlogActions, dispatch)
+    };
+}
+
+export default connect(mapState, mapDispatch)(Blog);

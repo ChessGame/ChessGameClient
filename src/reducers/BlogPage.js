@@ -13,13 +13,16 @@
  * @Copyright(©) 2015 by xiaomo.
  **/
 
-import * as types from '../constants/ActionTypes';
+import * as types from "../constants/ActionTypes";
 
-
-export default function login(state = [], action) {
+export default function blogs(visible = false, action) {
     switch (action.type) {
-        case types.LOGIN:
-            return state;
+        case types.SHOW_MODAL:
+            return true;
+        case types.HANDLE_OK:
+            return false;
+        case types.HANDLE_CANCEL:
+            return false;
         default:
             return state;
     }
