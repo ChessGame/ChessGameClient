@@ -12,15 +12,13 @@
  * @Description: 博客组件
  * @Copyright(©) 2015 by xiaomo.
  **/
-import React,{Component} from 'react';
-
+import React, {Component} from "react";
+import SideBox from "../common/SideBoxComponent";
 export default class Blog extends Component {
 
     render() {
         return (
-            <div>
-                xiaomo
-            </div>
+            <SideBox/>
         )
     }
 
