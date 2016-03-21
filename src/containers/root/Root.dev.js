@@ -19,11 +19,13 @@ export default class Root extends Component {
                     <Route path='/blog' component={IndexBlog}/>
                     <Route path='/changeLog' component={indexChangeLog}/>
                     <Route path='/about' component={indexAbout}/>
+                    <Route path='/login' component={indexChangeLog}/>
+                    <Route path='/register' component={IndexBlog}/>
                     <Route path="*" component={NotMatch}/>
                 </Route>
             </Router>
         );
-        
+
         const {store} = this.props;
         return (
             <Provider store={store}>
