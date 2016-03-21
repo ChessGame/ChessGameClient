@@ -14,7 +14,7 @@
  **/
 
 import React, {Component} from "react";
-import {Router, Route, Link, IndexLink, browserHistory} from "react-router";
+import {Link, IndexLink} from "react-router";
 export default class NavBar extends Component {
 
     state = {
@@ -25,7 +25,6 @@ export default class NavBar extends Component {
 
     componentDidMount() {
         const source = this.props.source;
-        console.log("navbar URL:" + source);
         fetch(source)
             .then(result=>result.json())
             .then(data=> {
@@ -41,8 +40,8 @@ export default class NavBar extends Component {
         if (menus.length > 0) {
             var ms = menus.map(function (menu, index) {
                 return (
-                    <li className="menu-font active">
-                        <Link key={index} to={menu.path}>{menu.name}</Link>
+                    <li className="menu-font active" key={index}>
+                        <Link to={menu.path}>{menu.name}</Link>
                     </li>
                 );
             });

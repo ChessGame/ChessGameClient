@@ -12,8 +12,7 @@
  * @Description: footer
  * @Copyright(©) 2015 by xiaomo.
  **/
-import React, { Component } from 'react';
-import Link from './LinkComponent';
+import React, {Component} from "react";
 
 export default class CopyRight extends Component {
     state = {
@@ -26,7 +25,6 @@ export default class CopyRight extends Component {
 
     componentDidMount() {
         const source = this.props.source;
-        console.log(source);
         fetch(source)
             .then(result=>result.json())
             .then(data => {
@@ -39,7 +37,6 @@ export default class CopyRight extends Component {
 
     render() {
         const {copyright}  = this.state;
-        console.log(copyright);
         return (
             <div>
                 CopyRight © { copyright.year } { copyright.siteName },Inc. All Rights Reserved.

@@ -4,7 +4,7 @@
       "id": 1,
       "name": "博客",
       "parentId": 0,
-      "path": "blog",
+      "path": "/blog",
       "component": "IndexBlog",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"
@@ -13,7 +13,7 @@
       "id": 2,
       "name": "更新日志",
       "parentId": 0,
-      "path": "changeLog",
+      "path": "/changeLog",
       "component": "IndexChangeLog",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"
@@ -22,7 +22,7 @@
       "id": 3,
       "name": "关于我",
       "parentId": 0,
-      "path": "about",
+      "path": "/about",
       "component": "IndexAbout",
       "createTime": "2015-1-12 12:32:22",
       "updateTime": "2015-1-12 12:32:22"

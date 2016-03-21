@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import { Progress } from 'antd';
+import React, {Component, PropTypes} from "react";
+import {Progress} from "antd";
 const ProgressLine = Progress.Line;
 
 export default class Counter extends Component {
@@ -11,7 +11,6 @@ export default class Counter extends Component {
     render() {
         const { increment, incrementIfOdd, decrement } = this.props.actions;
         const { counter } = this.props;
-        console.log("显示层counter:" + counter);
         return (
             <div>
                 <ProgressLine percent={counter} status="active"/>

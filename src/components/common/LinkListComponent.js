@@ -12,8 +12,7 @@
  * @Description: footer
  * @Copyright(©) 2015 by xiaomo.
  **/
-import React, { Component } from 'react';
-import Link from './LinkComponent';
+import React, {Component} from "react";
 
 export default class LinkList extends Component {
     state = {
@@ -38,7 +37,6 @@ export default class LinkList extends Component {
         const { links } = this.state;
         if (links.length > 0) {
             var lk = links.map(function (link, index) {
-                console.log(link);
                 return (
                     <li key={index}>
                         <a href={ link.href }>
