@@ -27,9 +27,9 @@
     "react-redux": "^4.1.0",
     "react-router": "^2.0.1",
     "react-slick": "^0.11.1",
+    "slick-carousel": "^1.5.9",
     "redux": "^3.1.1",
-    "redux-thunk": "^1.0.3",
-    "slick-carousel": "^1.5.9"
+    "redux-thunk": "^1.0.3"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
