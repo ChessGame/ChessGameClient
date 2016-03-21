@@ -14,27 +14,13 @@
  **/
 
 import React, {Component} from "react";
-import {Timeline} from "antd";
+import ChangeLog from "./ChangeLogComponent";
 
 export default class IndexChangeLog extends Component {
-
     render() {
         return (
             <div class="container">
-                <Timeline>
-                    <Timeline.Item color="green">2015-09-01</Timeline.Item>
-                    <Timeline.Item color="green"> 2015-09-01</Timeline.Item>
-                    <Timeline.Item color="red">
-                        <p>1基本测试版本</p>
-                        <p>初步排除网络异常2</p>
-                        <p>初步排除网络异常3 2015-09-01</p>
-                    </Timeline.Item>
-                    <Timeline.Item>
-                        <p>1基本测试版本</p>
-                        <p>1基本测试版本 </p>
-                        <p>技术测试异常3 2015-09-01</p>
-                    </Timeline.Item>
-                </Timeline>
+                <ChangeLog source="/src/data/changeLog.json"/>
             </div>
         )
     }
