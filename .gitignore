@@ -10,3 +10,4 @@ npm*.log*
 gen
 build
 node_modules
+.project

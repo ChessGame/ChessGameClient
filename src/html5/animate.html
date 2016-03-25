@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        .donghua {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+
+        .donghua:hover {
+            animation: amCheckboxIn 1s;
+
+        }
+
+        @keyframes amCheckboxIn {
+            0% {
+                background-color: grey;
+            }
+            50% {
+                background-color: mediumvioletred;
+            }
+            100% {
+                background-color: greenyellow;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="donghua"></div>
+</body>
+</html>
+
+
