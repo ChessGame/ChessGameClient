@@ -23,6 +23,14 @@ a {
     width: 100px;
     height: 26px;
     float: left;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.5);
 }
 
 .header .navbar {
@@ -33,7 +41,17 @@ a {
     float: right;
     line-height: 50px;
     padding-left: 30px;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
 }
+
+.header .navbar li:hover {
+    background-color: hotpink;
+}
+
 
 .header .navbar li a {
     font-family: 微软雅黑, serif;
