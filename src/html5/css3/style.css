@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #0e90d2;
+}
+
+.header .logo img {
+    padding-top: 10px;
+    margin-left: 400px;
+    width: 100px;
+    height: 26px;
+    float: left;
+}
+
+.header .navbar {
+    padding-right: 30px;
+}
+
+.header .navbar li {
+    float: right;
+    line-height: 50px;
+    padding-left: 30px;
+}
+
+.header .navbar li a {
+    font-family: 微软雅黑, serif;
+    font-size: 20px;
+    color: white;
+}
+
+.container {
+    width: 100%;
+    background-color: white;
+}
+
+.container .sidebar {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.container .skills {
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+    background-color: floralwhite;
+}
+
+.container .skills .title {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.container .skills .title p {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 微软雅黑, serif;
+    font-weight: bold;
+}
+
+.container .skills .skills-content {
+    width: 61%;
+    margin: 0 auto;
+}
+
+.container .skills .skills-content div {
+    width: 250px;
+    height: 300px;
+    background-color: lightgray;
+    margin-left: 20px;
+    float: left;
+}
+
+.container .comment {
+    background-color: #0bb59b;
+    width: 100%;
+    margin: 0 auto;
+    height: 228px;
+}
+
+.container .comment .container {
+    width: 60%;
+    background-color: #0bb59b;
+    margin: 0 auto;
+    height: 228px;
+}
+
+.container .concat {
+    width: 100%;
+    height: 561px;
+    background-color: white;
+}
+
+.footer {
+    width: 100%;
+    background-color: #555;
+    height: 100px;
+}
