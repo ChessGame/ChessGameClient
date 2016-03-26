@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/normalize/3.0.3/normalize.css">
+    <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+    <style>
+        * {
+            font-size: 15px;
+            font-family: 微软雅黑, serif;
+            font-style: normal;
+        }
+
+        * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            color: whitesmoke;
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #222;
+            height: 70px;
+            overflow: auto;
+            line-height: 70px;
+        }
+
+        .navbar .nav {
+            margin: 0 auto;
+            float: left;
+            overflow: hidden;
+        }
+
+        .navbar .nav ul li {
+            float: left;
+            height: 70px;
+            line-height: 70px;
+            margin-right: 20px;
+        }
+
+        .navbar .nav ul li a {
+            padding: 0 15px;
+        }
+
+        .navbar .nav ul li a:hover {
+            transition: background-color 0.5s, color 0.5s;
+            color: greenyellow;
+            background-color: black;
+
+        }
+
+        .navbar .logo {
+            text-indent: 80px;
+            color: #222;
+            height: 70px;
+            float: left;
+            display: inline-block;
+            padding-right: 80px;
+        }
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <a href="#">LOGO</a>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">职业课程</a></li>
+            <li><a href="#">技术问答</a></li>
+            <li><a href="#">会员中心</a></li>
+            <li><a href="#">系统设置</a></li>
+        </ul>
+    </div>
+</nav>
+</body>
+</html>
