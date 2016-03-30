@@ -7,7 +7,7 @@
 .header {
   background: url("../images/index.jpg") no-repeat;
   overflow: hidden;
-  background-size: cover;
+  background-size: 100% 100%;
   height: 600px;
   width: 100%;
   .navbar-brand img {
@@ -23,15 +23,16 @@
   .navbar-color {
     width: 70px;
     height: 30px;
-    line-height: 20px;
+    line-height: 15px;
     text-align: center;
     font-size: 14px;
     color: white;
     border-radius: 2px;
-    transition: background-color .5s, color .5s, font-size .5s;
+    transition: background-color .5s, color .5s, font-size .5s,font-weigth .5s;
   }
   .navbar-color:hover {
     font-size: 15px;
+    font-weight: 800;
     background-color: rgba(173, 255, 47, 0.3);
     color: greenyellow;
   }
@@ -68,11 +69,11 @@
 
 .useful {
   background-color: #0bb59b;
-  height: 330px;
+  height: 230px;
   width: 100%;
   img {
     position: relative;
-    left: 20%;
+    left: 10%;
     top: 30px;
   }
   .content {
@@ -81,9 +82,21 @@
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .useful {
-    height: 230px;
+    height: 330px;
+  }
+  .header {
+    height: 180px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+  .useful {
+    height: 330px;
+  }
+  .header {
+    height: 400px;
   }
 }
 

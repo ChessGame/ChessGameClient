@@ -11,3 +11,4 @@ gen
 build
 node_modules
 .project
+.sass-cache
