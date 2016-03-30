@@ -28,7 +28,7 @@
     font-size: 14px;
     color: white;
     border-radius: 2px;
-    transition: background-color .5s, color .5s, font-size .5s,font-weigth .5s;
+    transition: background-color .5s, color .5s, font-size .5s, font-weigth .5s;
   }
   .navbar-color:hover {
     font-size: 15px;
@@ -91,9 +91,12 @@
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 768px){
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .useful {
     height: 330px;
+    img {
+      left: 20%;
+    }
   }
   .header {
     height: 400px;

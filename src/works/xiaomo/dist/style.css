@@ -4474,7 +4474,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     font-size: 14px;
     color: white;
     border-radius: 2px;
-    transition: background-color .5s, color .5s, font-size .5s,font-weigth .5s; }
+    transition: background-color .5s, color .5s, font-size .5s, font-weigth .5s; }
   .header .navbar-color:hover {
     font-size: 15px;
     font-weight: 800;
@@ -4523,6 +4523,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .useful {
     height: 330px; }
+    .useful img {
+      left: 20%; }
   .header {
     height: 400px; } }
 
