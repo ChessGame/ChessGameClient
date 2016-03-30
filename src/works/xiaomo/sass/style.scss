@@ -68,7 +68,7 @@
 
 .useful {
   background-color: #0bb59b;
-  height: 230px;
+  height: 330px;
   width: 100%;
   img {
     position: relative;
@@ -76,9 +76,14 @@
     top: 30px;
   }
   .content {
-    position: relative;
-    left: 20%;
-    top: -70px;
+    padding-top: 40px;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .useful {
+    height: 230px;
   }
 }
 
