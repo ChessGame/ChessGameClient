@@ -9,8 +9,31 @@
     <link rel="stylesheet" href="index.html">
     <style>
         .header {
-
+            height: 50px;
+            width: 100%;
+            background-color: #333;
         }
+
+        .left {
+            background-color: pink;
+            height: 800px;
+        }
+
+        .middle {
+            background-color: greenyellow;
+            height: 800px;
+        }
+
+        .right {
+            height: 800px;
+            background-color: blueviolet;
+        }
+
+        .footer {
+            height: 30px;
+            background-color: darkgray;
+        }
+
 
     </style>
 </head>
@@ -20,13 +43,13 @@
 </header>
 <div class="container">
     <div class="row">
-        <div class="col-md-2">左</div>
-        <div class="col-md-8">中</div>
-        <div class="col-md-2">右</div>
+        <div class="col-md-2 left">左</div>
+        <div class="col-md-8 middle">中</div>
+        <div class="col-md-2 right">右</div>
     </div>
 </div>
-<footer>
-    <span class="container">copyRight 2016</span>
+<footer class=" footer" style="text-align: center;display: inline-block;width: 100%">
+    <span>copyRight 2016</span>
 </footer>
 
 <!--<script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.js"></script>-->
