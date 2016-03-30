@@ -6220,3 +6220,24 @@ a.bg-danger:focus, a.bg-danger:hover {
         display: none !important;
     }
 }
+
+.header {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 600px;
+    width: 100%;
+}
+
+.header .background {
+    position: absolute;
+    display: block;
+    opacity: 0.8;
+    width: 100%;
+    z-index: -1;
+}
+
+.header .nav-position {
+    width: 100%;
+    position: absolute;
+}
