@@ -3213,7 +3213,8 @@ a.label:focus, a.label:hover {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem; }
 
-@media screen and (min-width: 0 \0 ) {
+@media screen and (min-width: 0 \0
+) {
   .progress {
     background-color: #eee;
     border-radius: 0.25rem; }
@@ -3241,7 +3242,8 @@ a.label:focus, a.label:hover {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem; }
 
-@media screen and (min-width: 0 \0 ) {
+@media screen and (min-width: 0 \0
+) {
   .progress-bar-striped {
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-size: 1rem 1rem; } }
@@ -3252,7 +3254,8 @@ a.label:focus, a.label:hover {
 .progress-animated[value]::-moz-progress-bar {
   animation: progress-bar-stripes 2s linear infinite; }
 
-@media screen and (min-width: 0 \0 ) {
+@media screen and (min-width: 0 \0
+) {
   .progress-animated .progress-bar-striped {
     animation: progress-bar-stripes 2s linear infinite; } }
 
@@ -3262,7 +3265,8 @@ a.label:focus, a.label:hover {
 .progress-success[value]::-moz-progress-bar {
   background-color: #5cb85c; }
 
-@media screen and (min-width: 0 \0 ) {
+@media screen and (min-width: 0 \0
+) {
   .progress-success .progress-bar {
     background-color: #5cb85c; } }
 
@@ -3272,7 +3276,8 @@ a.label:focus, a.label:hover {
 .progress-info[value]::-moz-progress-bar {
   background-color: #5bc0de; }
 
-@media screen and (min-width: 0 \0 ) {
+@media screen and (min-width: 0 \0
+) {
   .progress-info .progress-bar {
     background-color: #5bc0de; } }
 
@@ -3282,7 +3287,8 @@ a.label:focus, a.label:hover {
 .progress-warning[value]::-moz-progress-bar {
   background-color: #f0ad4e; }
 
-@media screen and (min-width: 0 \0 ) {
+@media screen and (min-width: 0 \0
+) {
   .progress-warning .progress-bar {
     background-color: #f0ad4e; } }
 
@@ -3292,7 +3298,8 @@ a.label:focus, a.label:hover {
 .progress-danger[value]::-moz-progress-bar {
   background-color: #d9534f; }
 
-@media screen and (min-width: 0 \0 ) {
+@media screen and (min-width: 0 \0
+) {
   .progress-danger .progress-bar {
     background-color: #d9534f; } }
 
@@ -4476,8 +4483,6 @@ a.bg-danger:focus, a.bg-danger:hover {
     border-radius: 2px;
     transition: background-color .5s, color .5s, font-size .5s, font-weigth .5s; }
   .header .navbar-color:hover {
-    font-size: 15px;
-    font-weight: 800;
     background-color: rgba(173, 255, 47, 0.3);
     color: greenyellow; }
 
